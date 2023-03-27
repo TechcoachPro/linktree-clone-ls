@@ -6,7 +6,14 @@ let links = getLinks();
 let isPreviewOpen = false;
 
 function getLinks() {
-  return getItem("linkList") || [];
+  return getItem("linkList") || [{
+    title: "Website",
+    url: "https://techcoach.pro",
+    isVisible: true,
+    createdAt: new Date().getTime(),
+    click: 0,
+    thumbnail: "",
+  }];
 }
 
 export function addNewLink(btnEl) {
